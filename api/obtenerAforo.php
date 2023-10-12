@@ -25,7 +25,7 @@ function obtenerAforo() {
                 //echo json_encode($data);
                 // echo "Contador: " . $row['Contador'];
                 header('Content-Type: application/json');
-                echo json_encode(array('aforo' => $aforo));
+                echo json_encode(array('contador' => $contador));
             } else {
                 echo "No se encontraron registros en la tabla 'Aforo'.";
             }
