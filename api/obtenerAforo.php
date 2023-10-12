@@ -11,6 +11,7 @@ $query = 'SELECT "Contador" FROM "Aforo"';
         if ($row) {
             // Imprime el valor del contador en pantalla
             echo "Contador: " . $row['Contador'];
+            $contador = $row['Contador'];
             $total = 20;
 
             // Formatea el valor para mostrarlo como "contador/total"
