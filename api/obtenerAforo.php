@@ -1,5 +1,5 @@
 <?php
-require_once 'conexion.php';
+include __DIR__ . '/conexion.php';
 
 try {
     // Realiza la consulta SQL para obtener el valor del contador desde la tabla "Aforo"
