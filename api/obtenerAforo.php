@@ -19,7 +19,7 @@ $query = 'SELECT "Contador" FROM "Aforo"';
             // Imprimir el valor como JSON
             header('Content-Type: application/json');
             echo json_encode($data);
-            echo "Contador: " . $row['Contador'];
+            // echo "Contador: " . $row['Contador'];
         } else {
             echo "No se encontraron registros en la tabla 'Aforo'.";
         }
