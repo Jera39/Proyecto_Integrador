@@ -1,24 +1,13 @@
-document.addEventListener('DOMContentLoaded', function (event) {
-  async function actualizarContador() {
-      const { data, error } = await supabase
-          .from('Aforo')
-          .select('Contador');
+fetch('obtenerAforo.php')
+    .then(response => response.json())
+    .then(data => {
+        // Accede al valor de "contador" en los datos recibidos.
+        console.log(data.contador);
 
-      if (error) {
-          console.error('Error al obtener el contador:', error);
-          return;
-      }
-
-      const contador = data[0]?.Contador || 'N/A';
-      const total = 20; // El valor total deseado
-
-      // Actualiza el elemento HTML con el valor del contador en el formato "contador/total"
-      document.getElementById('contadorAforo').textContent = contador + '/' + total;
-  }
-
-  // Llama a la función para actualizar el contador cada X segundos
-  setInterval(actualizarContador, 2000); // Actualiza cada 2 segundos (puedes ajustar el intervalo)
-
-  // También, actualiza el contador inmediatamente cuando se carga la página
-  actualizarContador();
-});
+        // Haz lo que necesites con el valor en JavaScript.
+        // Por ejemplo, mostrarlo en el documento.
+        document.getElementById('resultado').innerHTML = "El valor de contador es: " + data.contador;
+    })
+    .catch(error => {
+        console.error('Hubo un error en la solicitud AJAX: ' + error);
+    });

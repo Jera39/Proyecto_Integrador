@@ -2,7 +2,7 @@
 include __DIR__ . '/conexion.php';
 
 try {
-    ob_start();
+    //ob_start();
     // Realiza la consulta SQL para obtener el valor del contador desde la tabla "Aforo"
 $query = 'SELECT "Contador" FROM "Aforo"';
     $result = $db->query($query);
@@ -15,11 +15,12 @@ $query = 'SELECT "Contador" FROM "Aforo"';
             $contador = $row['Contador'];
 
             // Crear un arreglo asociativo con el valor del contador
-            $data = array("contador" => $contador);
-            ob_end_clean();
+            //$data = array("contador" => $contador);
+            //ob_end_clean();
             // Imprimir el valor como JSON
             header('Content-Type: application/json');
-            echo json_encode($data);
+            echo json_encode(array('contador' => $contador));
+            //echo json_encode($data);
             // echo "Contador: " . $row['Contador'];
         } else {
             echo "No se encontraron registros en la tabla 'Aforo'.";
