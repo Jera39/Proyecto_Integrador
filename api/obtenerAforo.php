@@ -2,6 +2,7 @@
 include __DIR__ . '/conexion.php';
 
 try {
+    ob_start();
     // Realiza la consulta SQL para obtener el valor del contador desde la tabla "Aforo"
 $query = 'SELECT "Contador" FROM "Aforo"';
     $result = $db->query($query);
@@ -15,7 +16,7 @@ $query = 'SELECT "Contador" FROM "Aforo"';
 
             // Crear un arreglo asociativo con el valor del contador
             $data = array("contador" => $contador);
-            ob_clean();
+            ob_end_clean();
             // Imprimir el valor como JSON
             header('Content-Type: application/json');
             echo json_encode($data);
