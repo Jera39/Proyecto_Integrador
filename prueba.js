@@ -1,13 +1,15 @@
-fetch('obtenerAforo.php')
-    .then(response => response.json())
-    .then(data => {
-        // Accede al valor de "contador" en los datos recibidos.
-        console.log(data.contador);
+window.addEventListener('load', function() {
+  fetch('obtenerAforo.php')
+      .then(response => response.json())
+      .then(data => {
+          // Manipula los datos obtenidos en JavaScript.
+          console.log(data);
 
-        // Haz lo que necesites con el valor en JavaScript.
-        // Por ejemplo, mostrarlo en el documento.
-        document.getElementById('resultado').innerHTML = "El valor de contador es: " + data.contador;
-    })
-    .catch(error => {
-        console.error('Hubo un error en la solicitud AJAX: ' + error);
-    });
+          // Accede al valor de "aforo" y muestra en el HTML.
+          var resultadoDiv = document.getElementById('resultado');
+          resultadoDiv.innerHTML = `Aforo: ${data.aforo}`;
+      })
+      .catch(error => {
+          console.error('Hubo un error en la solicitud AJAX: ' + error);
+      });
+});
