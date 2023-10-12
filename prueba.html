@@ -16,7 +16,7 @@
             <button id="ejecutarPHP">Ejecutar PHP</button>
             <script>
                 document.getElementById("ejecutarPHP").addEventListener("click", function() {
-                    fetch("./api/conexion.php")
+                    fetch("./api/obtenerAforo.php")
                         .then(response => response.text())
                         .then(data => {
                             // Procesa la respuesta del archivo PHP
