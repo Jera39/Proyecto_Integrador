@@ -10,15 +10,16 @@ $query = 'SELECT "Contador" FROM "Aforo"';
         $row = $result->fetch(PDO::FETCH_ASSOC);
         if ($row) {
             // Imprime el valor del contador en pantalla
-            echo "Contador: " . $row['Contador'];
+            
             $contador = $row['Contador'];
 
             // Crear un arreglo asociativo con el valor del contador
             $data = array("contador" => $contador);
-
+            ob_clean();
             // Imprimir el valor como JSON
             header('Content-Type: application/json');
             echo json_encode($data);
+            echo "Contador: " . $row['Contador'];
         } else {
             echo "No se encontraron registros en la tabla 'Aforo'.";
         }
