@@ -1,0 +1,165 @@
+/* styles.css */
+body {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*SECCION DE CUADRO DE ENTRENADORES*/
+.seccionTrainer{
+  padding-top: 5%;
+}
+
+.titulo{
+  margin-left:10%;
+  margin-right: 10%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5rem;
+  padding: 2%;
+  backdrop-filter: blur(5px);
+}
+
+#login{
+  display: flex ;
+  justify-content: flex-end ;
+  border-radius: 5rem ;
+}
+
+#login svg{
+  height: 30px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 0px;
+  margin-right: 10px;
+  width: auto;
+}
+
+li#login a:hover .loglog circle,
+li#login a:hover .loglog path {
+    stroke: white; /* Cambia el color del trazo a blanco en el hover */
+}
+
+.card{
+  margin: 15%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body{
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.card-text, .card-title{
+  color: #fff;
+  text-align: center;
+}
+
+.card-img-top{
+  opacity: 1;
+  border-radius: 10rem;
+}
+
+/*FOOTER*/
+
+.dark-footer {
+  color: #fff;
+  padding: 0px 0;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-logo {
+  max-width: 100px;
+  /* Ajusta el tamaño máximo de la imagen */
+}
+
+.redes {
+  padding: 7px;
+}
+
+.container {
+  position: relative;
+}
+
+
+
+/*PANTALLAS DE CELULAR*/
+@media screen and (max-width:768px) {
+
+  body {
+    background-image: url('../img/fondo.jpg');
+  }
+  main{
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+  .seccionTrainer{
+    padding-top: 0%;
+    margin-top: 15%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+  }
+  .card{
+    margin: 4%;
+  }
+  #trainer1{
+    max-width: 350px;
+  }
+  #trainer2{
+    max-width: 350px;
+  }
+  .titulo{
+    margin-left:10%;
+    margin-right: 10%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2%;
+  }
+  
+  .card-body{
+    background: rgba(0, 0, 0, 0.7);  
+    max-width: 400px;
+  }
+
+}
+
+/*PANTALLAS GRANDES*/
+@media screen and (min-width: 1800px) {
+
+  body {
+    background-image: url('../img/fondo 2.jpg');
+  }
+  .seccionTrainer{
+    margin-top: 0%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 0%;
+  }
+}
+
+/*PANTALLAS MEDIANAS*/
+@media screen and (min-width:768px) and (max-width:1799px) {
+
+  body {
+    background-image: url('../img/fondo 2.jpg');
+  }
+  .seccionTrainer{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+  }
+  .titulo{
+    margin-left:10%;
+    margin-right: 10%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2%;
+  }
+}

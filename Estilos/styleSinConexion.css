@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.fondo {
+    background-image: url('../img/ab.gif');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+    display: flex;
+
+}
+
+.fondocelular {
+    display: none;
+}
+
+.conect{
+    display: none;
+}
+
+.contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.texto {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3rem;
+    backdrop-filter: blur(10px);
+    margin: 30px;
+}
+
+.texto h1 {
+
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 50px;
+    text-align: center;
+}
+
+
+/*Vista para celular*/
+
+@media screen and (max-width:767px) {
+    .fondo {
+        display: none;
+    }
+
+    .fondocelular {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .nube {
+        width: auto;
+        height: auto;
+        padding-top: 10px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 100px;
+        text-align: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: 5%;
+    }
+
+    .server {
+        width: auto;
+        height: auto;
+        padding-top: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        overflow: hidden;
+        margin-top: 5%;
+    }
+
+    .contenedor {
+        padding-top: 8%;
+        z-index: 3;
+    }
+    
+    .conect {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .conect div{
+        align-content: center;
+        display: flex;
+        position: relative;
+        margin: 35%;
+        width: auto;
+        height: 250px;
+        padding: 50px;
+        text-align: center;
+        justify-content: center;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .texto h1 {
+        position: relative;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bold;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .border-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 12px;
+        background: linear-gradient(to top,transparent, #4fc1f4, #243462);
+        animation: animate-border-left 4s linear infinite;
+    }
+
+    @keyframes animate-border-left {
+        0% {
+            transform: translateY(100%);
+        }
+
+        50% {
+            transform: translateY(100%);
+        }
+
+        98% {
+            transform: translateY(-100%);
+        }
+
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+
+    .border-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 12px;
+        background: linear-gradient(to bottom,transparent, #4fc1f4, #243462);
+        animation: animate-border-right 4s linear infinite;
+
+    }
+
+    @keyframes animate-border-right {
+        0% {
+            transform: translateY(-100%);
+        }
+
+        50% {
+            transform: translateY(100%);
+        }
+
+        100% {
+            transform: translateY(100%);
+        }
+    }
+}

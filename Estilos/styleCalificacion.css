@@ -1,0 +1,225 @@
+/* styles.css */
+body {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.dark-footer {
+    color: #fff;
+    padding: 0px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+#login {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 5rem;
+}
+
+#login svg {
+    height: 30px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0px;
+    margin-right: 10px;
+    width: auto;
+}
+
+li#login a:hover .loglog circle,
+li#login a:hover .loglog path {
+    stroke: white;
+    /* Cambia el color del trazo a blanco en el hover */
+}
+
+/*
+.dark-footer {
+    color: #fff;
+    padding: 0px 0;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+}*/
+
+.footer-logo {
+    max-width: 100px;
+    /* Ajusta el tamaño máximo de la imagen */
+}
+
+/*La parte de principal de la pantalla*/
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    justify-content: center;
+    /* Centra el contenido horizontalmente y verticalmente */
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.redes {
+    padding: 7px;
+}
+
+/*Calificacion de los entrenadores*/
+.containerCalificacion {
+    margin-top: 50px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    align-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.checked {
+    color: orange;
+}
+
+/*Estilos del cuadro de elección de entrenador:*/
+.containSelection {
+    margin: 30px;
+    text-align: center;
+}
+
+
+/*Texto e imagen principal*/
+.portada {
+
+    border-radius: 3rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 50px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.entrenador {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.text-section {
+    padding: 20px;
+    align-items: center;
+    animation: float 6s ease infinite;
+}
+#disqus_thread{
+    margin: 3%;
+}
+
+
+/*PANTALLAS DE CELULAR*/
+@media screen and (max-width:767px) {
+    .portada {
+        grid-template-columns: 1fr;
+        margin: 10px;
+        padding: 0px;
+    }
+
+    .text-section {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        animation: float 6s ease infinite;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .text-section h1 {
+        font-size: 21px;
+    }
+
+    .text-section h3 {
+        font-size: 15px;
+    }
+
+    .containSelection h2 {
+        font-size: 18px;
+    }
+
+    .containerCalificacion {
+        margin-top: 30px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .containerCalificacion h2 {
+        font-size: 18px;
+    }
+
+    .star-rating {
+        margin-top: 30px;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(5px);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(5px);
+        }
+    }
+}
+
+/*PANTALLAS GRANDES*/
+@media screen and (min-width: 1800px) {
+    .star-rating {
+        margin-top: 60px;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(15px);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+
+        100% {
+            transform: translateY(15px);
+        }
+    }
+}
+
+/*PANTALLAS MEDIANAS*/
+@media screen and (min-width:768px) and (max-width:1799px) {
+
+    .portada {
+        margin: 80px;
+        padding: 30px;
+    }
+
+    .star-rating {
+        margin-top: 50px;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(10px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+        100% {
+            transform: translateY(10px);
+        }
+    }
+}

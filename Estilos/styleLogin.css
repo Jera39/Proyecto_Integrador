@@ -1,0 +1,376 @@
+/* styleLogin.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.nubes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/nube7.png');
+    background-size: cover;
+    background-position: center;
+    animation: animacion 60s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes animacion {
+    0% {
+        background-position: 0px;
+    }
+
+    100% {
+        background-position: -5440px;
+    }
+}
+
+.contenido{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Todo el Login en general */
+.login {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 1000px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
+    border-width: 12px;
+    border-style: solid;
+
+}
+
+/*
+.login {
+    position: relative;
+    max-width: 2000px;
+    max-height: 1000px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 1000px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 2rem;
+    border: 10px solid transparent; 
+    border-image: linear-gradient(to right, #ffec73, transparent); 
+    border-image-slice: 1; 
+} */
+
+/*Cuadro del Banner*/
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+.logo {
+    height: auto;
+}
+
+.imglogo {
+    width: 160px;
+}
+
+.bienvenida {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.bienvenida h1 {
+    font-size: 70px;
+    letter-spacing: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+.bienvenida h2 {
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.bienvenida h3 {
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.redes {
+    align-items: center;
+    justify-content: center;
+    display: flex
+}
+
+.redes div {
+    margin-left: 25px;
+    margin-top: 0px;
+    margin-right: 25px;
+}
+
+
+/*cuadro de inicio de sesión*/
+
+.cuadro {
+
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    /* Añade espacio para el contenido del inicio de sesión */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.26rem;
+}
+
+/*Titulo*/
+.titulo {
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+}
+
+.titulo span {
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 40px;
+    animation: animate 8s linear infinite;
+}
+
+.titulo span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.titulo span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.titulo span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.titulo span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.titulo span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+@keyframes animate {
+    0% {
+        filter: blur(0px);
+    }
+
+    5% {
+        filter: blur(1px);
+    }
+
+    6% {
+        filter: blur(5px);
+    }
+
+    7% {
+        filter: blur(7px);
+    }
+
+    8% {
+        filter: blur(10px);
+    }
+
+    9% {
+        filter: blur(15px);
+    }
+
+    10% {
+        filter: blur(20px);
+    }
+
+    15% {
+        filter: blur(15px);
+    }
+
+    20% {
+        filter: blur(10px);
+    }
+
+    30% {
+        filter: blur(8px);
+    }
+
+    35% {
+        filter: blur(5px);
+    }
+
+    39% {
+        filter: blur(1px);
+    }
+
+    40% {
+        filter: blur(0px);
+    }
+
+    80% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+}
+
+/*PANTALLAS DE CELULAR*/
+@media screen and (max-width:767px) {
+
+    .contenido{
+        position:absolute;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%,0%);
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        right: 0%;
+    }
+
+    .login { 
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        border-width: 6px;
+
+    }
+
+    .banner{
+        height: 100%;
+        width: 100%;
+        padding-left: 6px;
+
+    }
+    .logo {
+        height: auto;
+        margin:60px;
+    }
+    .imglogo{
+        width: 130px;
+    }
+    .bienvenida {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    .bienvenida h1 {
+        font-size: 37px;
+        letter-spacing: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 60px;
+    }
+    
+    .bienvenida h2 {
+        font-size: 22px;
+        margin-bottom: 60px;
+    }
+    
+    .bienvenida h3 {
+        font-size: 12px;
+        margin-bottom: 60px;
+    }
+    
+    /*cuadro de inicio de sesión en celular*/
+
+.cuadro {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 1.65rem;
+}
+
+/*Titulo de celular*/
+.titulo {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 9px;
+}
+
+.titulo span {
+    letter-spacing: 8px;
+    font-size: 25px;
+}
+
+.formulario{
+    width: 100%;
+}
+.nubes{
+    opacity: 0.4;
+}
+}
+
+
+/*PANTALLAS MEDIANAS*/
+@media screen and (min-width:768px) and (max-width:1799px) {
+
+
+}
+
+
+/*PANTALLAS GRANDES*/
+@media screen and (min-width: 1800px) {
+
+}
+
