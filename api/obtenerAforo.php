@@ -12,13 +12,13 @@ $query = 'SELECT "Contador" FROM "Aforo"';
             // Imprime el valor del contador en pantalla
             echo "Contador: " . $row['Contador'];
             $contador = $row['Contador'];
-            $total = 20;
 
-            // Formatea el valor para mostrarlo como "contador/total"
-            $formattedValue = $contador . '/' . $total;
+            // Crear un arreglo asociativo con el valor del contador
+            $data = array("contador" => $contador);
 
-            // Imprime el valor formateado en el elemento HTML
-            echo 'Contador: ' . $formattedValue;
+            // Imprimir el valor como JSON
+            header('Content-Type: application/json');
+            echo json_encode($data);
         } else {
             echo "No se encontraron registros en la tabla 'Aforo'.";
         }
