@@ -1,3 +1,5 @@
+import { createClient } from '@supabase/supabase-js';
+
 var SUPABASE_URL = 'https://brieuupydnadfyfdbaes.supabase.co'
 var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJyaWV1dXB5ZG5hZGZ5ZmRiYWVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTUxNjc4MTUsImV4cCI6MjAxMDc0MzgxNX0.nDm98NfA_U05qd7u0-n9JZoA4Z_PMOZlIvtsoVkIwtk'
 
