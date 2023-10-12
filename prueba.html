@@ -12,6 +12,20 @@
         <div>
             <h2>Por aqui esta el mensaje</h2>
             <a href="api/autentificar.php">aqui</a>
+
+            <button id="ejecutarPHP">Ejecutar PHP</button>
+            <script>
+                document.getElementById("ejecutarPHP").addEventListener("click", function() {
+                    fetch("./api/conexion.php")
+                        .then(response => response.text())
+                        .then(data => {
+                            // Procesa la respuesta del archivo PHP
+                            console.log(data);
+                        });
+                });
+            </script>
+            
+
             <div id="mensaje">
 
             </div>
