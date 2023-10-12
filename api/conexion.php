@@ -1,3 +1,4 @@
+<?php
 $host = 'db.brieuupydnadfyfdbaes.supabase.co';
 $port = '5432';
 $dbname = 'postgres';
@@ -12,3 +13,4 @@ try {
 } catch (PDOException $e) {
     echo "Error al conectar a la base de datos: " . $e->getMessage();
 }
+?>
