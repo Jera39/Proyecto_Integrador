@@ -11,6 +11,13 @@ $query = 'SELECT "Contador" FROM "Aforo"';
         if ($row) {
             // Imprime el valor del contador en pantalla
             echo "Contador: " . $row['Contador'];
+            $total = 20;
+
+            // Formatea el valor para mostrarlo como "contador/total"
+            $formattedValue = $contador . '/' . $total;
+
+            // Imprime el valor formateado en el elemento HTML
+            echo 'Contador: ' . $formattedValue;
         } else {
             echo "No se encontraron registros en la tabla 'Aforo'.";
         }
