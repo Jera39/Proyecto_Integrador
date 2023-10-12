@@ -1,5 +1,7 @@
 <?php
-include __DIR__ . '/conexion.php';
+
+function obtenerAforo() {
+    include __DIR__ . '/conexion.php';
 
 try {
     //ob_start();
@@ -18,8 +20,8 @@ $query = 'SELECT "Contador" FROM "Aforo"';
             //$data = array("contador" => $contador);
             //ob_end_clean();
             // Imprimir el valor como JSON
-            header('Content-Type: application/json');
-            echo json_encode(array('contador' => $contador));
+            //header('Content-Type: application/json');
+            //echo json_encode(array('contador' => $contador));
             //echo json_encode($data);
             // echo "Contador: " . $row['Contador'];
         } else {
@@ -31,4 +33,12 @@ $query = 'SELECT "Contador" FROM "Aforo"';
 } catch (PDOException $e) {
     echo "Error al conectar a la base de datos: " . $e->getMessage();
 }
+}
+
+obtenerAforo();
+
+
+
+
+
 ?>
