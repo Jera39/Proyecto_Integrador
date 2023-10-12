@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-  fetch('obtenerAforo.php')
+  fetch('/api/obtenerAforo.php')
       .then(response => response.json())
       .then(data => {
           // Manipula los datos obtenidos en JavaScript.
