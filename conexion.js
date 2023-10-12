@@ -6,25 +6,21 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    async function actualizarContador() {
-        const { data, error } = await supabase
-            .from('Aforo')
-            .select('Contador')
-            .eq('ID_Contador', 1);
-
-        if (error) {
-            console.error('Error al obtener el contador:', error);
-            return;
+supabase.auth
+    .signIn({
+        email: 'a@a', // Reemplaza con tu email
+        password: 'pass', // Reemplaza con tu contraseña
+    })
+    .then((user) => {
+        const mensajeElement = document.getElementById('mensaje');
+        if (user) {
+            mensajeElement.textContent = 'Conexión exitosa a Supabase';
+            // Puedes realizar acciones adicionales aquí una vez que te hayas conectado.
+        } else {
+            mensajeElement.textContent = 'No se pudo conectar a Supabase';
         }
-
-        const contador = data[0]?.Contador || 'N/A';
-        document.getElementById('contadorAforo').textContent = contador;
-    }
-
-    // Llama a la función para actualizar el contador cada X segundos
-    setInterval(actualizarContador, 2000); // Actualiza cada 5 segundos (puedes ajustar el intervalo)
-
-    // También, actualiza el contador inmediatamente cuando se carga la página
-    actualizarContador();
-});
+    })
+    .catch((error) => {
+        const mensajeElement = document.getElementById('mensaje');
+        mensajeElement.textContent = 'Error al conectar a Supabase: ' + error.message;
+    });
