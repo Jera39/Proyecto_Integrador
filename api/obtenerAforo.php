@@ -37,8 +37,4 @@ function obtenerAforo() {
 
 obtenerAforo();
 
-
-
-
-
 ?>
