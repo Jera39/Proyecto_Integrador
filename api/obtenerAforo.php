@@ -5,7 +5,8 @@ include __DIR__ . '/conexion.php';
 try {
     //ob_start();
     // Realiza la consulta SQL para obtener el valor del contador desde la tabla "Aforo"
-$query = 'SELECT "Contador" FROM "Aforo"';
+    header('Content-Type: application/json');
+    $query = 'SELECT "Contador" FROM "Aforo"';
     $result = $db->query($query);
 
     if ($result !== false) {
@@ -19,7 +20,7 @@ $query = 'SELECT "Contador" FROM "Aforo"';
             //$data = array("contador" => $contador);
             //ob_end_clean();
             // Imprimir el valor como JSON
-            header('Content-Type: application/json');
+            
             echo json_encode(array('contador' => $contador));
             //echo json_encode($data);
             // echo "Contador: " . $row['Contador'];
