@@ -84,11 +84,31 @@
 						<h2 id="contadorAforo" class="af">Cargando...</h2>
 
 					</div>
+					<a href="prueba.html" type="button" class="btn btn-outline-warning">dsdsdsd</a>
 				</div>
 			</div>
 		</div>
 
-		<a href="prueba.html" type="button" class="btn btn-outline-warning">dsdsdsd</a>
+		<a href="#" type="button" class="btn btn-outline-warning" id="ejecutarPHP">Actualizar</a>
+
+		<script>
+			document.getElementById("ejecutarPHP").addEventListener("click", function () {
+				fetch("./api/obtenerAforo.php")
+					.then(response => response.text())
+					.then(data => {
+						// Procesa la respuesta del archivo PHP
+						console.log(data);
+					});
+				const contador = data.contador;
+				const total = 20; // El valor total deseado
+
+				// Formatea el valor para mostrarlo como "contador/total"
+				const formattedValue = contador + '/' + total;
+
+				// Actualiza el elemento HTML con el valor del contador en el formato "contador/total"
+				document.getElementById('contadorAforo').textContent = formattedValue;
+			});
+		</script>
 
 	</main>
 
