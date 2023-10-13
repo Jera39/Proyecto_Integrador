@@ -20,8 +20,6 @@ function obtenerAforo() {
                 //$data = array("contador" => $contador);
                 //ob_end_clean();
                 // Imprimir el valor como JSON
-                //header('Content-Type: application/json');
-                //echo json_encode(array('contador' => $contador));
                 //echo json_encode($data);
                 // echo "Contador: " . $row['Contador'];
                 header('Content-Type: application/json');
