@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
 
           // Accede al valor de "aforo" y muestra en el HTML.
           var resultadoDiv = document.getElementById('resultado');
-          resultadoDiv.innerHTML = `Aforo: ${data.aforo}`;
+          resultadoDiv.innerHTML = `Contador: ${data.contador}`;
       })
       .catch(error => {
           console.error('Hubo un error en la solicitud AJAX: ' + error);
