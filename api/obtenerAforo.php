@@ -21,7 +21,7 @@ function obtenerAforo() {
                 //ob_end_clean();
                 // Imprimir el valor como JSON
                 //echo json_encode($data);
-                // echo "Contador: " . $row['Contador'];
+                echo "Contador: " . $row['Contador'];
                 header('Content-Type: application/json');
                 echo json_encode(array('contador' => $contador));
             } else {
