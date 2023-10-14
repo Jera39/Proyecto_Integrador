@@ -18,27 +18,11 @@
     <main>
         <div>
             <h2>Por aqui esta el mensaje</h2>
-            <a href="api/autentificar.php">aqui</a>
-
-            <button id="ejecutarPHP">Ejecutar PHP</button>
-            <script>
-                document.getElementById("ejecutarPHP").addEventListener("click", function () {
-                    fetch("./api/obtenerAforo.php")
-                        .then(response => response.text())
-                        .then(data => {
-                            // Procesa la respuesta del archivo PHP
-                            console.log(data);
-                        });
-                    const contador = data.contador;
-                    const total = 20; // El valor total deseado
-
-                    // Formatea el valor para mostrarlo como "contador/total"
-                    const formattedValue = contador + '/' + total;
-
-                    // Actualiza el elemento HTML con el valor del contador en el formato "contador/total"
-                    document.getElementById('contadorAforo').textContent = formattedValue;
-                });
-            </script>
+            <h3>
+                <?php
+                echo "mensaje";
+                ?>
+            </h3>
 
 
             <div class="Contador">
