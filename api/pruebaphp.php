@@ -101,7 +101,7 @@
 				<div class="col-xs-12  col-md-6  col-lg-2">
 					<a class="navbar-brand"
 						href="file:///C:/Users/Marco/Desktop/CICLOS/CICLO%20JULIO%20-2023/Integrador%201/Proyecto/Gym/Index.html#"><img
-							src="./img/logo.png" alt="" width="75" height="75"></a>
+							src="../img/logo.png" alt="" width="75" height="75"></a>
 				</div>
 				<div class="col-xs-12 col-md-6  col-lg-2">
 					<p class="h4">Siguenos:</p>
