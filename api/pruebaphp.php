@@ -101,7 +101,7 @@
 						</h2>
 
 					</div>
-					<a href="#" type="button" class="btn btn-outline-warning" id="ejecutarPHP">Actualizar</a>
+					<a href="pruebaphp.php" type="button" class="btn btn-outline-warning" id="ejecutarPHP">Actualizar</a>
 				</div>
 			</div>
 		</div>
